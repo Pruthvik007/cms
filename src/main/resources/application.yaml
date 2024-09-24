@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: cms
+  datasource:
+    url: jdbc:mysql://localhost:3306/cms
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database: mysql
+logging:
+  level:
+    org:
+      springframework: INFO
+    com:
+      app:
+        cms: DEBUG

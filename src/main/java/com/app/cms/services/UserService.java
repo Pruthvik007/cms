@@ -5,7 +5,7 @@ import com.app.cms.dtos.ProductUpdateDto;
 import com.app.cms.entities.Product;
 import org.springframework.data.domain.Page;
 
-public interface ProductService {
+public interface UserService {
     Page<Product> getAllProducts(int pageNumber, String name, String brand, String category, Double minPrice, Double maxPrice);
 
     Product getProductById(Long id);

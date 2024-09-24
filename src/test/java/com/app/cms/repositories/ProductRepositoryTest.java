@@ -1,28 +1,30 @@
 package com.app.cms.repositories;
 
-import com.app.cms.entities.Product;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.test.annotation.Rollback;
 
-import static org.junit.jupiter.api.Assertions.*;
+import com.app.cms.entities.Product;
 
-@DataJpaTest
+@SpringBootTest
 @Rollback
 @DisplayName("Product Repository Tests")
-public class ProductRepositoryTest {
+class ProductRepositoryTest {
 
         @Autowired
         private ProductRepository productRepository;
 
         @BeforeEach
         void setUp() {
+                productRepository.deleteAll();
                 Product product1 = new Product(null, "Product A", "Brand A", "Description of Product A", 100.0, 10,
                                 "Category A", null, null);
                 Product product2 = new Product(null, "Product B", "Brand B", "Description of Product B", 200.0, 5,

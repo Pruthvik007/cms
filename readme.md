@@ -14,6 +14,7 @@ The Catalog Management System is a Spring Boot application that allows users to 
 ## Technologies Used
 
 - Spring Boot: Version 3.3.4
+- Java: Version 17
 - Database: MySQL
 - Testing Framework: JUnit, Mockito
 

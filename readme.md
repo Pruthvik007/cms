@@ -87,12 +87,33 @@ logging:
 - URL: /cms/product
 - Method: POST
 - Request Body: JSON object containing product details
+```
+{
+    "name": "Product Name",
+    "brand": "Brand Name",
+    "description": "Product Description",
+    "price": 100.0,
+    "quantity": 10,
+    "category": "Category Name"
+}
+```
 
 4. Update an Existing Product
 
 - URL: /cms/product
 - Method: PUT
 - Request Body: JSON object containing updated product details
+```
+{
+    "id": 1,
+    "name": "Updated Product Name",
+    "brand": "Updated Brand",
+    "description": "Updated Description",
+    "price": 120.0,
+    "quantity": 15,
+    "category": "Updated Category"
+}
+```
 
 5. Delete a Product
 
